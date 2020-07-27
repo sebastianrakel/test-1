@@ -1,0 +1,14 @@
+name: Close all Pull Requests and comment on them
+
+on:
+  pull_request:
+
+jobs:
+  close-prs:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run a one-line script
+      uses: devjoes/pr-automation@v0.1.0
+      with:
+        autoCloseLabel: "*"
+        closingSoonComment: Bye!
